@@ -10,6 +10,10 @@
 
 \includeonlyframes{current,}
 
+\tikzset{onslide/.code args={<#1>#2}{%
+  \only<#1>{\pgfkeysalso{#2}} 
+}}
+
 % This is to patch the issue with missing unicode-data package. Still illusive but it works.
 \usepackage{sansmathaccent}
 \pdfmapfile{+sansmathaccent.map}
@@ -54,10 +58,11 @@
 %\end{textblock*}}
 
 \title{Magneto-acoustic waves in an asymmetric magnetic slab}
-\author{\hspace*{2.8in} \textbf{Matthew Allcock} \\ \hspace*{2.8in} \small and \\ \hspace*{2.8in}\vspace*{-1.8in} Robertus Erd\'{e}lyi}
+\subtitle{Progress in spatial magneto-seismology}
+\author{\hspace*{2.8in} \textbf{Matthew Allcock} \\ \hspace*{2.8in} \small and \\ \hspace*{2.8in}\vspace*{-1.4in} Robertus Erd\'{e}lyi}
 %\date{\hspace*{2.8in}\vspace*{-1.6in}20th April 2017}
 \date{}
-\titlegraphic{\vspace*{1.3in}\hspace*{2.8in}\includegraphics[height=1cm]{media/logo-sheffield-2.png}\hspace*{0.2in}\includegraphics[height=1.2cm]{media/sp2rc_logo2.png}}
+\titlegraphic{\vspace*{0.9in}\hspace*{2.8in}\includegraphics[height=1cm]{media/logo-sheffield-2.png}\hspace*{0.2in}\includegraphics[height=1.2cm]{media/sp2rc_logo2.png}}
 
 %----------------------------------------------------------------------
 
@@ -70,60 +75,80 @@
 \setbeamertemplate{background}{%
   \vbox to \paperheight{\vfil\hbox to \paperwidth{\hfil\includegraphics[width=\paperwidth]{{media/eclipse-corona-aug-2017.jpg}}\hfil}}
 }
-\begin{frame}[label=current]
+\begin{frame}
   \titlepage
 \end{frame}
 }
 
 
-%\begin{frame}
-%\frametitle{Solar magneto-seismology}
-%%
-%%\color{black}
-%\newcommand{\tb}{\textcolor{black}}
-%\tikzstyle{format} = [draw, rounded corners=.055cm, fill=myblue!80]
-%\tikzstyle{medium} = [ellipse, draw, thin, fill=green!20, minimum height=2.5em]
+\begin{frame}[label=current]
+\frametitle{Solar magneto-seismology}
 %
-%\begin{figure}
-%\begin{tikzpicture}[node distance=1cm and 1cm, auto,>=latex', align = flush center, thick, on grid=false, font=\small]
-%    % We need to set at bounding box first. Otherwise the diagram
-%    % will change position for each frame.
-%    \path[use as bounding box] (-1,0) rectangle (10,-2);
-%    \path[]<1-> node[format] (obs) {
-%    		\tb{Observations}};
-%    \path[]<1-> node[below= of obs] (ghost) {};
-%    \path[]<1-> node[format, below= of ghost] (phys) {
-%    		\tb{Physical} \\ 
-%    		\tb{understanding}};
-%    	
-%    \path[]<2-> node[format, above right= of obs] (sp) {
-%    		\tb{Spatial} \\ 
-%    		\tb{parameters}};
-%    \path[]<2-> node[format, right= of obs] (eq p) {
-%    		\tb{Equilibrium} \\ 
-%    		\tb{parameters}};
-%    \path[]<2-> node[format, below right= of obs] (tp) {
-%    		\tb{Temporal} \\ 
-%    		\tb{parameters}};
-%%    \path[]<3-> node[format, below of=tp] (doo) {
-%%    		\tb{Temporal} \\ 
-%%    		\tb{parameters}};
-%
-%    \path[]<2-> node[format, below= of tp] (eq m) {
-%    					\tb{Equilibrium} \\ 
-%    					\tb{models}}
-%                   edge[<-] (phys);
-%%    \path[->]<4-> node[format, right of=ps] (pdf) {.pdf file}
-%%                  node[medium, below of=ps] (print) {printer}
-%%                  (ps) edge node {ps2pdf} (pdf)
-%%                       edge node[swap] {gs} (screen)
-%%                       edge (print);
-%%    \path[->]<5-> (pdf) edge (screen)
-%%                        edge (print);
-%%    \path[->, draw]<6-> (tex) -- +(0,1) -| node[near start] {pdf\TeX} (pdf);
-%\end{tikzpicture}
-%\end{figure}
-%\end{frame}
+%\color{black}
+\newcommand{\tb}{\textcolor{black}}
+\tikzstyle{format} = [draw, rounded corners=.055cm, fill=myblue!80]
+\tikzstyle{medium} = [ellipse, draw, thin, fill=green!20, minimum height=2.5em]
+
+\begin{figure}
+\begin{tikzpicture}[node distance=1.8cm and 3.cm, auto, >=latex, align = flush center, ultra thick, on grid=true, font=\small]
+    % We need to set at bounding box first. Otherwise the diagram
+    % will change position for each frame.
+    \path[use as bounding box] (-1,0) rectangle (10,-2);
+    \path[onslide=<1>{alert}]<1-> node[format] (obs) {
+    		\tb{Observations}};
+    \path[]<1-> node[below= of obs] (ghost) {};
+    \path[onslide=<4>{alert}]<4-> node[format, below= of ghost] (phys) {
+    		\tb{Physical} \\ 
+    		\tb{understanding}};
+    		
+    \path[onslide={<2,8>{alert}}, onslide=<10>{green}]<2-> node[format, below right= of obs] (ep) {
+    		\tb{Equilibrium} \\ 
+    		\tb{parameters}};
+    \path[onslide=<2>{alert}]<2-> (ep) edge[<-] (obs);
+    \path[onslide=<2>{alert}]<2-> node[format, above right= of obs] (wp) {
+    		\tb{Wave} \\ 
+    		\tb{parameters}}
+    		edge[<-] (obs);
+    		
+    \path[onslide=<3>{alert}]<3-> node[format, right= of wp] (tp) {
+    		\tb{Temporal} \\ 
+    		\tb{parameters}}
+    		edge[<-] (wp);
+    \path[onslide=<3>{alert}]<3-> node[format, below= of tp] (sp) {
+    		\tb{Spatial} \\ 
+    		\tb{parameters}}
+    		edge[<-] (wp)
+    		edge[<-] (ep);  
+
+    \path[onslide=<5>{alert}, onslide=<10>{green}]<5-> node[format, right= of phys] (em) {
+    					\tb{Equilibrium} \\ 
+    					\tb{models}};
+    \path[onslide=<5>{alert}]<5-> (em) edge[<-] (phys);
+                   
+    \path[onslide=<6>{alert}, onslide=<10>{green}]<6-> node[format, right= of em] (eig) {
+    					\tb{Eigenmodes}}
+                   edge[<-] (em);
+                   
+    \path[onslide=<7>{alert}, onslide=<10>{green}]<7-> node[format, right= of sp] (ts) {
+    					\tb{Temporal} \\
+    					\tb{magneto-seismology}};
+    \path[onslide=<7>{alert}]<7-> (ts) edge[<-] (tp);
+    \node <7-> at (6,-2) (ghost2) {};
+    \draw <7-> [->, onslide=<7>{alert}, onslide=<10>{green}] (ghost2.center) -- (ts);
+    \draw <7-> [onslide=<7>{alert}, onslide=<10>{green}] (ghost2.center) -- (eig);
+    \path[onslide=<7>{alert}]<7-> node[format, below right= of sp] (ss) {
+    					\tb{Spatial} \\
+    					\tb{magneto-seismology}}
+                   edge[<-] (eig)
+                   edge[<-] (sp);
+
+    
+    \path[onslide=<8>{alert}, onslide=<10>{green}]<8-> (ts) edge[->] (ep);
+	\path[onslide=<8>{alert}]<8-> (ss) edge[->] (ep);    
+                 
+\end{tikzpicture}
+\end{figure}
+\end{frame}
 
 
 \begin{frame}
@@ -274,117 +299,117 @@ See \textbf{Allcock} and Erd\'{e}lyi, 2017.
 
 
 
-\begin{frame}
-\frametitle{Asymmetric slab modes}
-\begin{figure}
-\hspace*{-1cm}
-\includemedia[
-  height=0.7\paperheight,
-  transparent,
-  addresource=media/R1_1.9_slow-kink-surf_front_video_overlay2_looped.mp4,
-  flashvars={
-     source=media/R1_1.9_slow-kink-surf_front_video_overlay2_looped.mp4
-    &loop=true
-  }
-]{\centering\includegraphics{media/animation-coverpage-slow-kink-surf.png}}{VPlayer.swf}
-\end{figure}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Asymmetric slab modes}
-\begin{figure}
-\hspace*{-1cm}
-\includemedia[
-  height=0.7\paperheight,
-  transparent,
-  addresource=media/R1_1.9_slow-saus-surf_front_video_overlay2_looped.mp4,
-  flashvars={
-     source=media/R1_1.9_slow-saus-surf_front_video_overlay2_looped.mp4
-    &loop=true
-  }
-]{\centering\includegraphics{media/animation-coverpage-slow-saus-surf.png}}{VPlayer.swf}
-\end{figure}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Asymmetric slab modes}
-%\begin{center}
-\vspace*{-0.25in}
-\begin{figure}
-\makebox[\textwidth][c]{
-\subfloat[]{
-\includemedia[
-  label=vidA,
-  width=0.49\paperwidth,
-  transparent,
-  addresource=media/R1_1.8_fast-kink-body-1_front_video_overlay2_looped.mp4,
-  flashvars={
-     source=media/R1_1.8_fast-kink-body-1_front_video_overlay2_looped.mp4
-    &loop=true
-  }
-]{\centering\includegraphics{media/animation-coverpage-fast-kink-body1.png}}{VPlayer.swf}
-}
-
-\hspace*{-0.2in}
+%\begin{frame}
+%\frametitle{Asymmetric slab modes}
+%\begin{figure}
+%\hspace*{-1cm}
+%\includemedia[
+%  height=0.7\paperheight,
+%  transparent,
+%  addresource=media/R1_1.9_slow-kink-surf_front_video_overlay2_looped.mp4,
+%  flashvars={
+%     source=media/R1_1.9_slow-kink-surf_front_video_overlay2_looped.mp4
+%    &loop=true
+%  }
+%]{\centering\includegraphics{media/animation-coverpage-slow-kink-surf.png}}{VPlayer.swf}
+%\end{figure}
+%\end{frame}
+%
+%
+%\begin{frame}
+%\frametitle{Asymmetric slab modes}
+%\begin{figure}
+%\hspace*{-1cm}
+%\includemedia[
+%  height=0.7\paperheight,
+%  transparent,
+%  addresource=media/R1_1.9_slow-saus-surf_front_video_overlay2_looped.mp4,
+%  flashvars={
+%     source=media/R1_1.9_slow-saus-surf_front_video_overlay2_looped.mp4
+%    &loop=true
+%  }
+%]{\centering\includegraphics{media/animation-coverpage-slow-saus-surf.png}}{VPlayer.swf}
+%\end{figure}
+%\end{frame}
+%
+%
+%\begin{frame}
+%\frametitle{Asymmetric slab modes}
+%%\begin{center}
+%\vspace*{-0.25in}
+%\begin{figure}
+%\makebox[\textwidth][c]{
+%\subfloat[]{
+%\includemedia[
+%  label=vidA,
+%  width=0.49\paperwidth,
+%  transparent,
+%  addresource=media/R1_1.8_fast-kink-body-1_front_video_overlay2_looped.mp4,
+%  flashvars={
+%     source=media/R1_1.8_fast-kink-body-1_front_video_overlay2_looped.mp4
+%    &loop=true
+%  }
+%]{\centering\includegraphics{media/animation-coverpage-fast-kink-body1.png}}{VPlayer.swf}
+%}
+%
+%\hspace*{-0.2in}
+%%\vspace*{-0.4in}
+%
+%\subfloat[]{
+%\includemedia[
+%  label=vidB,
+%  width=0.49\paperwidth,
+%  transparent,
+%  addresource=media/R1_1.8_fast-saus-body-1_front_video_overlay2_looped.mp4,
+%  flashvars={
+%     source=media/R1_1.8_fast-saus-body-1_front_video_overlay2_looped.mp4
+%    &loop=true
+%  }
+%]{\centering\includegraphics{media/animation-coverpage-fast-saus-body1.png}}{VPlayer.swf}
+%}}
+%
+%\vspace*{-0.1in}
+%
+%\makebox[\textwidth][c]{
+%\subfloat[]{
+%\includemedia[
+%  label=vidC,
+%  width=0.49\paperwidth,
+%  transparent,
+%  addresource=media/R1_1.8_fast-kink-body-2_front_video_overlay2_looped.mp4,
+%  flashvars={
+%     source=media/R1_1.8_fast-kink-body-2_front_video_overlay2_looped.mp4
+%    &loop=true
+%  }
+%]{\centering\includegraphics{media/animation-coverpage-fast-kink-body2.png}}{VPlayer.swf}
+%}
+%
+%\hspace*{-0.2in}
+%
+%\subfloat[]{
+%\includemedia[
+%  label=vidD,
+%  width=0.49\paperwidth,
+%  transparent,
+%  addresource=media/R1_1.8_fast-saus-body-2_front_video_overlay2_looped.mp4,
+%  flashvars={
+%     source=media/R1_1.8_fast-saus-body-2_front_video_overlay2_looped.mp4
+%    &loop=true
+%  }
+%]{\centering\includegraphics{media/animation-coverpage-fast-saus-body2.png}}{VPlayer.swf}
+%}}
+%\end{figure}
+%%\end{center}
+%
 %\vspace*{-0.4in}
-
-\subfloat[]{
-\includemedia[
-  label=vidB,
-  width=0.49\paperwidth,
-  transparent,
-  addresource=media/R1_1.8_fast-saus-body-1_front_video_overlay2_looped.mp4,
-  flashvars={
-     source=media/R1_1.8_fast-saus-body-1_front_video_overlay2_looped.mp4
-    &loop=true
-  }
-]{\centering\includegraphics{media/animation-coverpage-fast-saus-body1.png}}{VPlayer.swf}
-}}
-
-\vspace*{-0.1in}
-
-\makebox[\textwidth][c]{
-\subfloat[]{
-\includemedia[
-  label=vidC,
-  width=0.49\paperwidth,
-  transparent,
-  addresource=media/R1_1.8_fast-kink-body-2_front_video_overlay2_looped.mp4,
-  flashvars={
-     source=media/R1_1.8_fast-kink-body-2_front_video_overlay2_looped.mp4
-    &loop=true
-  }
-]{\centering\includegraphics{media/animation-coverpage-fast-kink-body2.png}}{VPlayer.swf}
-}
-
-\hspace*{-0.2in}
-
-\subfloat[]{
-\includemedia[
-  label=vidD,
-  width=0.49\paperwidth,
-  transparent,
-  addresource=media/R1_1.8_fast-saus-body-2_front_video_overlay2_looped.mp4,
-  flashvars={
-     source=media/R1_1.8_fast-saus-body-2_front_video_overlay2_looped.mp4
-    &loop=true
-  }
-]{\centering\includegraphics{media/animation-coverpage-fast-saus-body2.png}}{VPlayer.swf}
-}}
-\end{figure}
-%\end{center}
-
-\vspace*{-0.4in}
-
-\mediabutton[
-  mediacommand=vidA:playPause,
-  mediacommand=vidB:playPause,
-  mediacommand=vidC:playPause,
-  mediacommand=vidD:playPause
-]{\fbox{}}
-\end{frame}
+%
+%\mediabutton[
+%  mediacommand=vidA:playPause,
+%  mediacommand=vidB:playPause,
+%  mediacommand=vidC:playPause,
+%  mediacommand=vidD:playPause
+%]{\fbox{}}
+%\end{frame}
 
 
 

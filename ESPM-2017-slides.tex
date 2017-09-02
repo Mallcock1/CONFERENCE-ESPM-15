@@ -8,7 +8,7 @@
 \usetikzlibrary{arrows,shapes, positioning}
 \usepackage{color}
 
-\includeonlyframes{current}
+\includeonlyframes{current,}
 
 \tikzset{onslide/.code args={<#1>#2}{%
   \only<#1>{\pgfkeysalso{#2}} 
@@ -834,12 +834,13 @@ D = \frac{(k^2{v_A}^2-\omega^2)m_2\frac{\rho_0}{\rho_2}\tanh({m_0}x_0) - \omega^
 \frametitle{Further work}
 Generalise the model to a variety of structures:
 \begin{itemize}
-\item Add \textbf{magnetic field} outside the slab - coronal structures. See \textbf{Mihai Barbulescu}'s poster.
-\item Add \textbf{steady flow} - dynamic structures e.g. solar wind.
+\item Add \textcolor{red}{\textbf{magnetic field}} outside the slab - coronal structures. See \textbf{Zs\'{a}mberger and Erd\'{e}lyi}, published soon.
+\item Add \textcolor{cyan}{\textbf{steady flow}} - dynamic structures e.g. solar wind. See \textbf{Mihai Barbulescu}'s poster.
 \end{itemize}
 
 \begin{figure}
 \centering
+\scalebox{0.8}{
 \begin{tikzpicture}
 \path [fill=lightgray, opacity=0.45] (3.5,0) -- (3.5,4) -- (6.5,4) -- (6.5,0) -- (3.5,0);
 \shade[left color=lightgray,right color=black, opacity=0.45] (6.5,0) -- (6.5,4) -- (7,4.3) -- (7,0.3) -- (6.5,0);
@@ -892,6 +893,25 @@ Generalise the model to a variety of structures:
 \draw [ultra thick, red, -stealth] (6,0) -- (6,4);
 \draw [ultra thick, red, path fading=south] (6,-0.3) -- (6,0);
 
+\newcommand{\lw}{2.5pt}
+
+\draw [line width=\lw, cyan, path fading=north] (4.25,-0.3) -- (4.25, 1.7);
+\draw [line width=\lw, cyan, path fading=south] (4.25,-0.6) -- (4.25,-0.3);
+\draw [line width=\lw, cyan, path fading=south] (4.25,2.2) -- (4.25,4.4);
+\draw [line width=\lw, cyan, -stealth] (4.25,4.4) -- (4.25,4.5);
+\draw [line width=\lw, cyan, path fading=north] (4.75,-0.3) -- (4.75, 1.7);
+\draw [line width=\lw, cyan, path fading=south] (4.75,-0.6) -- (4.75,-0.3);
+\draw [line width=\lw, cyan, path fading=south] (4.75,2.2) -- (4.75,4.4);
+\draw [line width=\lw, cyan, -stealth] (4.75,4.4) -- (4.75,4.5);
+\draw [line width=\lw, cyan, path fading=north] (5.25,-0.3) -- (5.25, 1.7);
+\draw [line width=\lw, cyan, path fading=south] (5.25,-0.6) -- (5.25,-0.3);
+\draw [line width=\lw, cyan, path fading=south] (5.25,2.2) -- (5.25,4.4);
+\draw [line width=\lw, cyan, -stealth] (5.25,4.4) -- (5.25,4.5);
+\draw [line width=\lw, cyan, path fading=north] (5.75,-0.3) -- (5.75, 1.7);
+\draw [line width=\lw, cyan, path fading=south] (5.75,-0.6) -- (5.75,-0.3);
+\draw [line width=\lw, cyan, path fading=south] (5.75,2.2) -- (5.75,4.4);
+\draw [line width=\lw, cyan, -stealth] (5.75,4.4) -- (5.75,4.5);
+
 \draw [ultra thick, red, path fading=north] (8,0) -- (8, 2.2);
 \draw [ultra thick, red, path fading=south] (8,-0.3) -- (8,0);
 \draw [ultra thick, red, path fading=south] (8,2.7) -- (8,3.9);
@@ -919,7 +939,10 @@ Generalise the model to a variety of structures:
 \node [right] at (1.1,2.5) {$\rho_1$, $p_1$, $T_1$};
 \node [right] at (4,2) {$\rho_0$, $p_0$, $T_0$};
 \node [right] at (7.1,2.5) {$\rho_2$, $p_2$, $T_2$};
+\Large
+\node [cyan] at (5,4.7) {$\mathbf{U_0}$};
 \end{tikzpicture}
+}
 \end{figure}
 \end{frame}
 
@@ -928,10 +951,21 @@ Generalise the model to a variety of structures:
 \frametitle{Future work}
 Apply to observations of, for example:
 \begin{itemize}
-\item \textbf{prominences}, 
-\item elongated \textbf{magnetic bright points}, 
-\item sunspot \textbf{light walls}.
+\item<1-> Elongated \alert<1>{\textbf{magnetic bright points}},
+\item<2-> \alert<2>{\textbf{Prominences}}, 
+\item<3-> Sunspot \alert<3>{\textbf{light walls}}.
 \end{itemize}
+\vspace{0.5cm}
+\centering
+\includegraphics<2>[height=3.5cm]{media/hinode-prominence.jpg}
+\includegraphics<3>[height=3.5 cm]{media/sunspot_lightbridge.png}
+\includegraphics<1>[height=3.5 cm]{media/mbptogether.png}
+\\
+\centering
+\tiny
+\only<2>{NASA}
+\only<3>{Max Planck Institute for Solar System Research}
+\only<1>{Adaptation of Liu et al., 2017, by N. Zs\'{a}mberger}
 \end{frame}
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.29)  3 SEP 2017 14:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.5.29)  3 SEP 2017 14:12
 entering extended mode
 **ESPM-2017-slides.tex
 
@@ -1542,36 +1542,130 @@ Overfull \hbox (3.55235pt too wide) in paragraph at lines 240--240
 
 ] [15
 
-] [16
+]
+<media/animation-coverpage-slow-kink-surf.png, id=195, 1297.2465pt x 729.927pt>
+File: media/animation-coverpage-slow-kink-surf.png Graphic file (type png)
+<use media/animation-coverpage-slow-kink-surf.png>
+Package pdftex.def Info: media/animation-coverpage-slow-kink-surf.png used on i
+nput line 317.
+(pdftex.def)             Requested size: 1297.24335pt x 729.92522pt.
+\g__file_internal_ior=\read2
+<<VPlayer.swf>><<media/R1_1.9_slow-kink-surf_mag_front_video_overlay2_looped.mp
+4>>
+Overfull \hbox (6.49986pt too wide) in paragraph at lines 317--317
+ |  [][][][][][] 
+ []
 
-] [17
+[16
 
-] [18
+ <C:/Files/Documents/University of Sheffield/PhD/conferences-and-workshops/2017
+/ESPM-15-2017/media/animation-coverpage-slow-kink-surf.png>]
+<media/animation-coverpage-slow-saus-surf.png, id=213, 1297.2465pt x 729.927pt>
+File: media/animation-coverpage-slow-saus-surf.png Graphic file (type png)
+<use media/animation-coverpage-slow-saus-surf.png>
+Package pdftex.def Info: media/animation-coverpage-slow-saus-surf.png used on i
+nput line 334.
+(pdftex.def)             Requested size: 1297.24335pt x 729.92522pt.
+<<media/R1_1.9_slow-saus-surf_mag_front_video_overlay2_looped.mp4>>
+Overfull \hbox (6.49986pt too wide) in paragraph at lines 334--334
+ |  [][][][][][] 
+ []
+
+[17
+
+ <C:/Files/Documents/University of Sheffield/PhD/conferences-and-workshops/2017
+/ESPM-15-2017/media/animation-coverpage-slow-saus-surf.png>]
+<media/animation-coverpage-fast-kink-body1.png, id=229, 1297.2465pt x 729.927pt
+>
+File: media/animation-coverpage-fast-kink-body1.png Graphic file (type png)
+ <use media/animation-coverpage-fast-kink-body1.png>
+Package pdftex.def Info: media/animation-coverpage-fast-kink-body1.png used on 
+input line 413.
+(pdftex.def)             Requested size: 1297.24335pt x 729.92522pt.
+<<media/R1_1.8_fast-kink-body-1_front_video_overlay2_looped.mp4>>
+<media/animation-coverpage-fast-saus-body1.png, id=239, 1297.2465pt x 729.927pt
+>
+File: media/animation-coverpage-fast-saus-body1.png Graphic file (type png)
+ <use media/animation-coverpage-fast-saus-body1.png>
+Package pdftex.def Info: media/animation-coverpage-fast-saus-body1.png used on 
+input line 413.
+(pdftex.def)             Requested size: 1297.24335pt x 729.92522pt.
+<<media/R1_1.8_fast-saus-body-1_front_video_overlay2_looped.mp4>>
+<media/animation-coverpage-fast-kink-body2.png, id=249, 1297.2465pt x 729.927pt
+>
+File: media/animation-coverpage-fast-kink-body2.png Graphic file (type png)
+ <use media/animation-coverpage-fast-kink-body2.png>
+Package pdftex.def Info: media/animation-coverpage-fast-kink-body2.png used on 
+input line 413.
+(pdftex.def)             Requested size: 1297.24335pt x 729.92522pt.
+<<media/R1_1.8_fast-kink-body-2_front_video_overlay2_looped.mp4>>
+<media/animation-coverpage-fast-saus-body2.png, id=259, 1297.2465pt x 729.927pt
+>
+File: media/animation-coverpage-fast-saus-body2.png Graphic file (type png)
+ <use media/animation-coverpage-fast-saus-body2.png>
+Package pdftex.def Info: media/animation-coverpage-fast-saus-body2.png used on 
+input line 413.
+(pdftex.def)             Requested size: 1297.24335pt x 729.92522pt.
+<<media/R1_1.8_fast-saus-body-2_front_video_overlay2_looped.mp4>>
+*************************************************
+* media9 warning: "undefined reference"
+* 
+* Line 413: Media reference `vidA' not defined.
+*************************************************
+*************************************************
+* media9 warning: "undefined reference"
+* 
+* Line 413: Media reference `vidB' not defined.
+*************************************************
+*************************************************
+* media9 warning: "undefined reference"
+* 
+* Line 413: Media reference `vidC' not defined.
+*************************************************
+*************************************************
+* media9 warning: "undefined reference"
+* 
+* Line 413: Media reference `vidD' not defined.
+*************************************************
+[18
+
+ <C:/Files/Documents/University of Sheffield/PhD/conferences-and-workshops/2017
+/ESPM-15-2017/media/animation-coverpage-fast-kink-body1.png> <C:/Files/Document
+s/University of Sheffield/PhD/conferences-and-workshops/2017/ESPM-15-2017/media
+/animation-coverpage-fast-saus-body1.png> <C:/Files/Documents/University of She
+ffield/PhD/conferences-and-workshops/2017/ESPM-15-2017/media/animation-coverpag
+e-fast-kink-body2.png> <C:/Files/Documents/University of Sheffield/PhD/conferen
+ces-and-workshops/2017/ESPM-15-2017/media/animation-coverpage-fast-saus-body2.p
+ng>] [19
+
+] [20
+
+] [21
 
 ]
-<media/RA_vA_approx_2var.png, id=212, 578.16pt x 433.62pt>
+<media/RA_vA_approx_2var.png, id=301, 578.16pt x 433.62pt>
 File: media/RA_vA_approx_2var.png Graphic file (type png)
 
 <use media/RA_vA_approx_2var.png>
 Package pdftex.def Info: media/RA_vA_approx_2var.png used on input line 830.
 (pdftex.def)             Requested size: 151.74721pt x 113.81102pt.
 
-<media/DM_vA_approx_2var.png, id=213, 578.16pt x 433.62pt>
+<media/DM_vA_approx_2var.png, id=302, 578.16pt x 433.62pt>
 File: media/DM_vA_approx_2var.png Graphic file (type png)
 
 <use media/DM_vA_approx_2var.png>
 Package pdftex.def Info: media/DM_vA_approx_2var.png used on input line 830.
 (pdftex.def)             Requested size: 151.74721pt x 113.81102pt.
- [19
+ [22
 
  <C:/Files/Documents/University of Sheffield/PhD/conferences-and-workshops/2017
 /ESPM-15-2017/media/RA_vA_approx_2var.png> <C:/Files/Documents/University of Sh
 effield/PhD/conferences-and-workshops/2017/ESPM-15-2017/media/DM_vA_approx_2var
-.png>] [20
+.png>] [23
 
-] [21
+] [24
 
-] [22
+] [25
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{current<1>})
  has been already used, duplicate ignored
@@ -1583,13 +1677,13 @@ ame{current}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.969 \end{frame}
-                  <media/mbptogether.png, id=435, 2409.0pt x 1296.845pt>
+                  <media/mbptogether.png, id=524, 2409.0pt x 1296.845pt>
 File: media/mbptogether.png Graphic file (type png)
 
 <use media/mbptogether.png>
 Package pdftex.def Info: media/mbptogether.png used on input line 969.
 (pdftex.def)             Requested size: 184.96793pt x 99.58464pt.
- [23
+ [26
 
  <C:/Files/Documents/University of Sheffield/PhD/conferences-and-workshops/2017
 /ESPM-15-2017/media/mbptogether.png>]pdfTeX warning (ext4): destination with th
@@ -1602,7 +1696,7 @@ File: media/hinode-prominence.jpg Graphic file (type jpg)
  <use media/hinode-prominence.jpg>
 Package pdftex.def Info: media/hinode-prominence.jpg used on input line 969.
 (pdftex.def)             Requested size: 196.08365pt x 99.58464pt.
- [24
+ [27
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{current<3>})
  has been already used, duplicate ignored
@@ -1614,10 +1708,10 @@ File: media/sunspot_lightbridge.png Graphic file (type png)
  <use media/sunspot_lightbridge.png>
 Package pdftex.def Info: media/sunspot_lightbridge.png used on input line 969.
 (pdftex.def)             Requested size: 153.50572pt x 99.58464pt.
- [25
+ [28
 
 ]
-<media/twitter-icon.png, id=453, 256.96pt x 256.96pt>
+<media/twitter-icon.png, id=542, 256.96pt x 256.96pt>
 File: media/twitter-icon.png Graphic file (type png)
 
 <use media/twitter-icon.png>
@@ -1632,18 +1726,35 @@ File: media/sp2rc_logo2.png Graphic file (type png)
 <use media/sp2rc_logo2.png>
 Package pdftex.def Info: media/sp2rc_logo2.png used on input line 987.
 (pdftex.def)             Requested size: 46.29196pt x 45.52458pt.
- [26
+ [29
 
  <C:/Files/Documents/University of Sheffield/PhD/conferences-and-workshops/2017
 /ESPM-15-2017/media/twitter-icon.png>]
 \tf@nav=\write6
 \tf@toc=\write7
 \tf@snm=\write8
+
+*************************************************
+* media9 warning: "rerun"
+* 
+* Rerun to get internal references right!
+*************************************************
+*************************************************
+* media9 warning: "undefined references"
+* 
+* There were undefined media references!
+*************************************************
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 989.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 989.
 
 ("C:\Files\Documents\University of Sheffield\PhD\conferences-and-workshops\2017
-\ESPM-15-2017\ESPM-2017-slides.aux")
+\ESPM-15-2017\ESPM-2017-slides.aux"
+*************************************************
+* pdfbase warning: "rerun"
+* 
+* Rerun to get internal references right!
+*************************************************
+)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 989.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 989.
 Package rerunfilecheck Info: File `ESPM-2017-slides.out' has not changed.
@@ -1659,13 +1770,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 989.
  ) 
 Here is how much of TeX's memory you used:
- 32667 strings out of 493921
- 684069 string characters out of 3144870
- 817669 words of memory out of 3000000
- 35319 multiletter control sequences out of 15000+200000
+ 32756 strings out of 493921
+ 687349 string characters out of 3144870
+ 819135 words of memory out of 3000000
+ 35387 multiletter control sequences out of 15000+200000
  31326 words of font info for 98 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 56i,22n,67p,10376b,938s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,22n,83p,10376b,938s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Matthew\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi60
 0\ecso1000.pk> <C:\Users\Matthew\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknap
 pen\ec\dpi657\ecso1000.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
@@ -1685,9 +1796,9 @@ rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Pr
 ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Prog
 ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on ESPM-2017-slides.pdf (26 pages, 2643899 bytes).
+Output written on ESPM-2017-slides.pdf (29 pages, 19526071 bytes).
 PDF statistics:
- 539 PDF objects out of 1000 (max. 8388607)
- 57 named destinations out of 1000 (max. 500000)
- 927 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 629 PDF objects out of 1000 (max. 8388607)
+ 63 named destinations out of 1000 (max. 500000)
+ 1149 words of extra memory for PDF output out of 10000 (max. 10000000)
 
